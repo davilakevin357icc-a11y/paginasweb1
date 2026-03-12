@@ -2,30 +2,54 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Tabla de Animales</title>
+<title>Tabla de Animales Nueva</title>
 
 <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
 table {
   border-collapse: collapse;
-  width: 80%;
+  width: 90%;
   margin: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 th, td {
-  border: 2px solid black;
-  padding: 10px;
+  border: 1px solid #34495e;
+  padding: 12px;
   text-align: center;
+}
+
+th {
+  background-color: #34495e;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ecf0f1;
+}
+
+tr:hover {
+  background-color: #d1e7ff;
 }
 
 img {
   width: 120px;
+  border-radius: 8px;
 }
 </style>
-
 </head>
 <body>
 
-<h2 style="text-align:center;">Tabla de Animales</h2>
+<h2>Animales del Mundo</h2>
 
 <table>
 <tr>
@@ -37,41 +61,31 @@ img {
 <tr>
 <td>León</td>
 <td>El león es un gran felino conocido como el rey de la selva.</td>
-<td>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg">
-</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="León"></td>
 </tr>
 
 <tr>
 <td>Tigre</td>
 <td>El tigre es el felino más grande del mundo y tiene rayas negras.</td>
-<td>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg">
-</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg" alt="Tigre"></td>
 </tr>
 
 <tr>
-<td>Pantera Negra</td>
-<td>La pantera negra es una variante oscura de leopardos o jaguares.</td>
-<td>
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Black_Panther.jpg">
-</td>
-</tr>
-
-<tr>
-<td>Serpiente</td>
-<td>Las serpientes son reptiles que se desplazan sin patas.</td>
-<td>
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Grass_snake_Natrix_natrix.jpg">
-</td>
+<td>Panda</td>
+<td>El panda gigante es un oso de China conocido por su pelaje blanco y negro y su amor por el bambú.</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda"></td>
 </tr>
 
 <tr>
 <td>Águila</td>
-<td>El águila es un ave rapaz conocida por su gran vista y vuelo.</td>
-<td>
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Golden_Eagle_in_flight_-_5.jpg">
-</td>
+<td>El águila es un ave rapaz conocida por su aguda vista y vuelo majestuoso.</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Golden_Eagle_in_flight_-_5.jpg" alt="Águila"></td>
+</tr>
+
+<tr>
+<td>Delfín</td>
+<td>El delfín es un mamífero marino muy inteligente y social.</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Common_dolphin_porpoising.jpg" alt="Delfín"></td>
 </tr>
 
 </table>
