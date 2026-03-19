@@ -1,29 +1,93 @@
-<tr>
-    <td>León</td>
-    <td>El león es un felino carnívoro conocido como el rey de la selva.</td>
-    <td><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d" alt="León"></td>
-</tr>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Animales</title>
 
-<tr>
-    <td>Elefante</td>
-    <td>El elefante es el animal terrestre más grande del mundo.</td>
-    <td><img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46" alt="Elefante"></td>
-</tr>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
-<tr>
-    <td>Delfín</td>
-    <td>El delfín es un mamífero marino muy inteligente y sociable.</td>
-    <td><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Delfín"></td>
-</tr>
+        h2 {
+            margin-top: 20px;
+        }
 
-<tr>
-    <td>Águila</td>
-    <td>El águila es un ave rapaz con excelente visión y gran habilidad de vuelo.</td>
-    <td><img src="https://images.unsplash.com/photo-1501706362039-c6e80948b45a" alt="Águila"></td>
-</tr>
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: white;
+        }
 
-<tr>
-    <td>Panda</td>
-    <td>El panda es un oso que se alimenta principalmente de bambú.</td>
-    <td><img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7" alt="Panda"></td>
-</tr>
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        img {
+            width: 120px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Tabla de Animales</h2>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+    </tr>
+
+    <tr>
+        <td>León</td>
+        <td>El león es un felino carnívoro conocido como el rey de la selva.</td>
+        <td><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d" alt="León"></td>
+    </tr>
+
+    <tr>
+        <td>Elefante</td>
+        <td>El elefante es el animal terrestre más grande del mundo.</td>
+        <td><img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46" alt="Elefante"></td>
+    </tr>
+
+    <tr>
+        <td>Delfín</td>
+        <td>El delfín es un mamífero marino muy inteligente y sociable.</td>
+        <td><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Delfín"></td>
+    </tr>
+
+    <tr>
+        <td>Águila</td>
+        <td>El águila es un ave rapaz con excelente visión y gran habilidad de vuelo.</td>
+        <td><img src="https://images.unsplash.com/photo-1501706362039-c6e80948b45a" alt="Águila"></td>
+    </tr>
+
+    <tr>
+        <td>Panda</td>
+        <td>El panda es un oso que se alimenta principalmente de bambú.</td>
+        <td><img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7" alt="Panda"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
+
