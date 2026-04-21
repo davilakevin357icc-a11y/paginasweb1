@@ -1,0 +1,248 @@
+/* --- ESTILOS GENERALES (RESET Y BASES) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif; /* Tipografía limpia similar a la imagen */
+        }
+
+        body {
+            background-color: #f0f0f0; /* Fondo gris claro para el navegador */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Contenedor principal del CV (Simulando una hoja A4) */
+        .cv-container {
+            width: 800px; /* Ancho estándar de CV */
+            min-height: 1120px; /* Alto estándar A4 aproximado */
+            background-color: #ffffff;
+            display: grid;
+            grid-template-columns: 35% 65%; /* Define las dos columnas */
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            overflow: hidden; /* Mantiene todo dentro de los bordes */
+        }
+
+        /* --- ESTILOS DE LA COLUMNA IZQUIERDA (NEGRA) --- */
+        .left-column {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra la foto */
+        }
+
+        /* Foto de perfil */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Hace la foto circular */
+            border: 5px solid #ffffff; /* Borde blanco de la imagen */
+            background-image: url('https://i.imgur.com/eN6p1O7.png'); /* URL de la imagen extraída de la referencia */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+        }
+
+        /* Estilos de secciones de la columna izquierda */
+        .left-section {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        .left-section-title {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .left-section-title i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Contenido de texto en columna izquierda */
+        .contact-item, .formation-item {
+            font-size: 13px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            font-weight: 300;
+        }
+
+        .formation-item .institution {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .formation-item .details {
+            font-style: italic;
+            opacity: 0.8;
+            font-size: 12px;
+        }
+
+        /* Lista de Habilidades */
+        .skills-list {
+            list-style: none;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: start;
+        }
+
+        /* Punto viñeta personalizado */
+        .skills-list li::before {
+            content: "•";
+            color: #ffffff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* --- ESTILOS DE LA COLUMNA DERECHA (BLANCA) --- */
+        .right-column {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 50px 40px;
+        }
+
+        /* Cabecera del nombre */
+        .header-name {
+            margin-bottom: 40px;
+        }
+
+        .header-name h1 {
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        /* Recuadro del apellido */
+        .lastname-box {
+            border: 3px solid #8A2BE2; /* Color morado/azul de la imagen */
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+        .lastname-box h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Barra decorativa negra */
+        .black-bar {
+            width: 350px;
+            height: 25px;
+            background-color: #000000;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+
+        /* Secciones principales de la columna derecha */
+        .right-section {
+            margin-bottom: 30px;
+        }
+
+        .right-section-header {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .right-section-header i {
+            margin-right: 15px;
+            font-size: 22px;
+        }
+
+        /* Párrafo de Perfil Personal */
+        .profile-text {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-left: 37px; /* Alineación con el texto del icono */
+        }
+
+        /* Lista de Experiencia Laboral */
+        .experience-list {
+            list-style: none;
+            margin-left: 37px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+        }
+
+        /* Punto viñeta indentado */
+        .experience-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #000;
+        }
+
+        /* Títulos de categorías de experiencia (Obra, Carpintería, etc.) */
+        .experience-category {
+            font-weight: 700; /* Negrita */
+            font-style: italic; /* Itálica */
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .experience-category:first-child {
+            margin-top: 0;
+        }
+
+        /* Sub-tareas de experiencia */
+        .experience-subtask {
+            font-weight: 400;
+            font-style: italic;
+            color: #444;
+        }
+
+        /* Sección de Idiomas (al final) */
+        .languages-section {
+            margin-top: auto; /* Empuja hacia abajo si hay espacio */
+            padding-top: 20px;
+        }
+
+        .languages-list {
+            list-style: none;
+            margin-left: 37px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .languages-list li {
+            margin-bottom: 4px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        /* Viñeta pequeña de idiomas */
+        .languages-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+        }
