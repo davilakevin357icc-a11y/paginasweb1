@@ -4,110 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Kevin Edwin Davila Suarez</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>CV Kevin Edwin Davila Suarez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET Y BASES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #525659; /* Fondo de visualizador de PDF */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL (A4) --- */
+        .cv-page {
+            width: 800px;
+            min-height: 1100px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 320px 1fr; /* Columna izquierda fija, derecha flexible */
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* --- COLUMNA IZQUIERDA (OSCURA) --- */
+        .sidebar {
+            background-color: #000000;
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            /* NOTA: Asegúrate de que la imagen esté en la carpeta CV */
+            background-color: #333; 
+        }
+
+        .sidebar-section {
+            margin-bottom: 35px;
+        }
+
+        .sidebar-title {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Espacio para los iconos locales */
+        .sidebar-title img {
+            width: 20px;
+            margin-right: 10px;
+            filter: invert(1); /* Invierte color a blanco si el icono es negro */
+        }
+
+        .info-text {
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .institution-name {
+            font-weight: 700;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .skills-list {
+            list-style: none;
+            font-size: 0.75rem;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- COLUMNA DERECHA (BLANCA) --- */
+        .main-content {
+            padding: 50px 40px;
+            color: #000;
+        }
+
+        .header-name {
+            margin-bottom: 50px;
+        }
+
+        .firstname {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .lastname-box {
+            border: 3px solid #8147ff; /* Color de acento púrpura según imagen */
+            display: inline-block;
+            padding: 5px 15px;
+            margin: 5px 0;
+        }
+
+        .lastname {
+            font-size: 2.8rem;
+            font-weight: 800;
+        }
+
+        .black-divider {
+            width: 80%;
+            height: 20px;
+            background-color: #000;
+            margin-top: 10px;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-header img {
+            width: 25px;
+            margin-right: 15px;
+        }
+
+        .body-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-left: 40px;
+            text-align: justify;
+        }
+
+        /* Estilos específicos para la lista de experiencia */
+        .experience-group {
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        .exp-title {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .exp-list {
+            list-style: none;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .exp-list li {
+            margin-bottom: 3px;
+        }
+
+        /* Ajuste para el traslape de Idiomas al final */
+        .languages-footer {
+            margin-top: 50px;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="cv-container">
+
+    <div class="cv-page">
         <aside class="sidebar">
             <div class="profile-img-container">
-                <img src="cv/perfil.jpg" alt="Foto de Perfil" class="profile-img">
+                <img src="CV/perfil.png" alt="Kevin Edwin" class="profile-img">
             </div>
 
-            <section class="sidebar-section">
-                <h3><i class="fas fa-phone"></i> Contacto</h3>
-                <p>911-234-567</p>
-                <p>davilakevin35777@gmail.com</p>
-                <p>ixtlahuaca, estado de mexico</p>
-            </section>
-
-            <section class="sidebar-section">
-                <h3><i class="fas fa-graduation-cap"></i> Formación</h3>
-                <div class="item">
-                    <p class="bold">Dolores manzalla de flores</p>
-                    <p class="small">secundaria 2020-2023</p>
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <img src="CV/icono-contacto.png" alt=""> Contacto
                 </div>
-                <div class="item">
-                    <p class="bold">instituto cultural canadiense</p>
-                    <p class="small">educacion media superior - en proceso de finalizacion 2023-2026</p>
-                    <p class="small italic">proximo a iniciar estudios en contabilidad</p>
-                </div>
-            </section>
+                <p class="info-text">911-234-567</p>
+                <p class="info-text">davilakevin35777@gmail.com</p>
+                <p class="info-text">ixtlahuaca, estado de mexico</p>
+            </div>
 
-            <section class="sidebar-section">
-                <h3><i class="fas fa-tools"></i> Habilidades</h3>
-                <ul>
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <img src="CV/icono-formacion.png" alt=""> Formación
+                </div>
+                <p class="info-text">
+                    <span class="institution-name">Dolores manzilla de flores</span>
+                    secundaria 2020-2023
+                </p>
+                <p class="info-text">
+                    <span class="institution-name">instituto cultural canadiense</span>
+                    educacion media superior - en proceso de finalizacion 2023-2026
+                </p>
+                <p class="info-text">
+                    <i>proximo a iniciar estudios en contabilidad</i>
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <img src="CV/icono-habilidades.png" alt=""> Habilidades
+                </div>
+                <ul class="skills-list">
                     <li>Responsabilidad y disciplina</li>
                     <li>Trabajo en equipo</li>
-                    <li>Aprendizaje rapido</li>
+                    <li>Aprendizaje rápido</li>
                     <li>Buena actitud laboral</li>
                     <li>Compromiso con la calidad del trabajo</li>
-                    <li>Habilidades físicas y deportivas</li>
-                    <li>Futbol</li>
-                    <li>Fronton</li>
-                    <li>Ajedrez</li>
+                    <li>Habilidades físicas y deportivas: Fútbol, Frontón, Ajedrez</li>
                 </ul>
-            </section>
+            </div>
         </aside>
 
         <main class="main-content">
-            <header>
-                <h1>KEVIN EDWIN <br> <span>DAVILA SUAREZ</span></h1>
-                <div class="header-line"></div>
+            <header class="header-name">
+                <div class="firstname">KEVIN EDWIN</div>
+                <div class="lastname-box">
+                    <div class="lastname">DAVILA SUAREZ</div>
+                </div>
+                <div class="black-divider"></div>
             </header>
 
-            <section class="main-section">
-                <h3><i class="fas fa-user"></i> Perfil Personal</h3>
-                <p>joven responsable y comprometido, con 3 años de experiencia en trabajos de construccion, carpinteria y servicios. Me caracterizo por hacer las cosas bien, ser disiplinado, y tener dispocision para aprender. Busco seguir desarrollandome academica y profecionalmente.</p>
+            <section class="content-section">
+                <div class="section-header">
+                    <img src="CV/icono-perfil.png" alt=""> Perfil Personal
+                </div>
+                <p class="body-text">
+                    joven responsable y comprometido, con 3 años de experiencia en trabajos de construccion, carpinteria y servicios. Me caracterizo por hacer las cosas bien, ser disiplainado, y tener dispocision para aprender. Busco seguir desarrollandome academica y profecionalmente.
+                </p>
             </section>
 
-            <section class="main-section">
-                <h3><i class="fas fa-briefcase"></i> Experiencia Laboral</h3>
+            <section class="content-section">
+                <div class="section-header">
+                    <img src="CV/icono-maletin.png" alt=""> Experiencia Laboral
+                </div>
                 
-                <div class="job">
-                    <h4>Obra civil y construcción</h4>
-                    <ul>
-                        <li>Apoyo en actividades generales de construcción</li>
-                        <li>Manejo de herramientas</li>
-                        <li>Trabajo en equipo en obra</li>
+                <div class="experience-group">
+                    <div class="exp-title">Obra civil y construcción</div>
+                    <ul class="exp-list">
+                        <li>• Apoyo en actividades generales de construcción</li>
+                        <li>• Manejo de herramientas</li>
+                        <li>• Trabajo en equipo en obra</li>
                     </ul>
                 </div>
 
-                <div class="job">
-                    <h4>Carpintería</h4>
-                    <ul>
-                        <li>Elaboración y apoyo en trabajos de madera</li>
-                        <li>Uso de herramientas</li>
-                        <li>Acabados básicos</li>
+                <div class="experience-group">
+                    <div class="exp-title">Carpintería</div>
+                    <ul class="exp-list">
+                        <li>• Elaboración y apoyo en trabajos de madera</li>
+                        <li>• Uso de herramientas</li>
+                        <li>• Acabados básicos</li>
                     </ul>
                 </div>
 
-                <div class="job">
-                    <h4>Pintura</h4>
-                    <ul>
-                        <li>Pintura de superficies</li>
-                        <li>Preparación de materiales</li>
-                    </ul>
-                </div>
+                </section>
 
-                <div class="job">
-                    <h4>Bartender</h4>
-                    <ul>
-                        <li>Preparación de bebidas</li>
-                        <li>Atención al cliente</li>
-                        <li>Trabajo bajo presión</li>
-                    </ul>
+            <section class="content-section languages-footer">
+                <div class="section-header">
+                    <img src="CV/icono-idiomas.png" alt=""> Idiomas
                 </div>
-            </section>
-
-            <section class="main-section">
-                <h3><i class="fas fa-language"></i> Idiomas</h3>
-                <p>Ingles Nivel Basico</p>
-                <p>Frances Nivel Basico</p>
+                <p class="body-text" style="font-size: 0.8rem;">
+                    Español Nativo<br>
+                    Inglés Nivel Basico<br>
+                    Francés Nivel Básico
+                </p>
             </section>
         </main>
     </div>
+
 </body>
 </html>
